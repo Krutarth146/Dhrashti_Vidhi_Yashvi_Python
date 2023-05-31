@@ -59,3 +59,27 @@ f1.close()
 
 # Total Words, Characters, starts with 'a'
 # Prime Number print, amstrong Number print in particular File
+
+
+
+fp = open("vidhi.txt",'w')
+list1 = ["Royal Techno -> It Institutey\n", "Dhiraj Sir -> Spiritual Guru\n", "Dhiraj Sir -> Spiritual Guru\n"]
+fp.writelines(list1)
+fp.close()
+
+fp = open("vidhi.txt",'r')
+data = fp.read()
+
+counter = 0
+
+list2 = data.split()
+print(list2)
+for x in list2:
+    # print(x)
+    # if x.endswith('y'):
+    if x.startswith('R'):
+        counter+=1
+
+print(counter)
+
+fp.close()
