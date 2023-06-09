@@ -83,3 +83,31 @@ for x in list2:
 print(counter)
 
 fp.close()
+
+
+# Operators, string, list, tuple, set, dictionary, functions, args-  kwargs, recursion, iteration, generators, map, reduce, filter, lambda, loops, break - continue
+
+
+def prime(start, end):
+    for num in range(start,end+1):
+        divisors = 0   # 
+        for i in range(1,num+1):
+            if num % i == 0:
+                divisors += 1
+        
+        if divisors == 2:
+            yield num
+
+for x in prime(25,90):
+    print(x)
+
+# whether the string is Panagram or not???
+str1 = "The quick brown fox jumps over the lazy dog"
+print(len(str1))   # 43
+
+str1 = ''
+for i in range(97,123):
+    str1 += chr(i)
+    print(id(str1))
+    
+print(str1)   # abcdefghijklmnopqrstuvwxyz
